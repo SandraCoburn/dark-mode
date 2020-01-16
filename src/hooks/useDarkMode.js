@@ -1,8 +1,8 @@
 import { useLocalStorage } from "./useLocalStorage";
 import { useEffect } from "react";
 
-export const useDarkMode = () => {
-  const [darkMode, setDarkMode] = useLocalStorage(false);
+export const useDarkMode = key => {
+  const [darkMode, setDarkMode] = useLocalStorage(key);
 
   useEffect(() => {
     //If local storage is true add the clas dark-mode to the body element
